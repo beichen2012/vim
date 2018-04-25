@@ -92,7 +92,7 @@ let mapleader = "\<space>"
 if g:isGUI
     colorscheme monokai              "Gvim配色方案
 else
-    colorscheme desert               "终端配色方案
+    colorscheme monokai               "终端配色方案
 endif
 "/*************************************key map*****************************/"
 nmap <leader>h <c-w>h
