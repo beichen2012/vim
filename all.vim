@@ -50,7 +50,11 @@ set fileencoding=utf-8
 "解决菜单乱码
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-set termencoding=cp936  "解决console输出乱码
+if g:isGUI
+	set termencoding=cp936  "解决console输出乱码
+else
+	set termencoding=utf-8
+endif
 language messages zh_CN.utf-8   "设置中文提示
 set helplang=cn         "设置中文帮助
 set ambiwidth=double    "设置为双字宽显示
@@ -96,11 +100,13 @@ nmap <leader>j <c-w>j
 nmap <leader>k <c-w>k
 nmap <leader>l <c-w>l
 
-nmap <f2> :!start cmd.exe<cr>       "在当前目录启动cmd  (实验证明：ctrl+f2是非常不稳定的，时常失效)
+nmap <f2> :!start cmder.exe<cr>       "在当前目录启动cmd  (实验证明：ctrl+f2是非常不稳定的，时常失效)
 " nmap <c-f1> :!start "C:\\Anaconda3\\python.exe"<cr>     "启动python，并把工作目录设置为当前目录
 nmap <c-h> :%!xxd<cr>               "16进制浏览模式, 按u返回
 " nmap <c-g> :!start "C:\\Program Files\\Git\\git-bash.exe"<cr>
 nmap <c-s> :w!<cr>      "设置强制保存快捷键
+"设定跳转
+nmap <leader>; <c-w>]<cr>
 "/*************************************vim airline*****************************/"
 "Plugin 'vim-airline'
 " 显示颜色
