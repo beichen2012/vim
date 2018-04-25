@@ -22,7 +22,7 @@ md ~\vimfiles\autoloaduri = 'https://raw.githubusercontent.com/junegunn/vim-plug
 
 ###### 安装power line 字体
 
-###### 解压ctags(universal-ctag)，把ctag.exe和readtag.exe放到vim目录下或$PATH路径下
+###### 解压ctags(universal-ctag)，把ctag.exe和readtag.exe放到vim目录下或$PATH路径下(linux下使用包管理工具搜ctags,安装一个即可）
 
 ###### 如果系统中没有python3.5（看vim需要），安装python3.5
 
