@@ -23,6 +23,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 Plug 'Yggdroot/LeaderF'
 Plug 'majutsushi/tagbar'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
 
 
 " Initialize plugin system
@@ -217,4 +220,21 @@ let g:Lf_StlColorscheme = 'powerline'
 nmap <leader>ff :LeaderfFunction<cr>
 "/******************************************* tagbar
 nmap <F4> :TagbarToggle<cr>
+"//******************************for vim-session(它需要 vim-misc的支持)
+set sessionoptions-=help
+set sessionoptions-=buffers         "会话不保存那些隐藏和非激活的buffers(即只保存两个buffer:一个当前，一个轮换)
+set sessionoptions-=blank
+set sessionoptions+=winpos
+set sessionoptions+=slash
+set sessionoptions+=unix
+let g:session_direcory="~/vimsessions"
+let g:session_autosave="yes"                "自动保存会话
+let g:session_default_name="default"        "默认的会话的名字是default
+let g:session_autoload="no"             "自动加载会话
+let g:session_default_to_last=0             "配合上一条设置，自动打开最后一次打开的会话
+let g:session_command_aliases=1             "打开命令的别名，如：SessionOpen = OpenSession
+nmap <leader>sc :CloseSession<cr>
+nmap <leader>sd :DeleteSession<cr>
+nmap <leader>so :OpenSession<space>
+nmap <leader>ss :SaveSession<space>
 
