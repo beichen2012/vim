@@ -10,7 +10,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " 配色
 Plug 'sickill/vim-monokai'
-Plug 'altercation/solarized'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,6 +22,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 Plug 'Yggdroot/LeaderF'
+Plug 'majutsushi/tagbar'
 
 
 " Initialize plugin system
@@ -198,7 +198,7 @@ let NERDTreeIndicatorMapCustom = {
 "let g:nerdtree_tabs_open_on_new_tab=0
 "打开NERDTree，并把焦点设置回文件
 nmap <F3> :NERDTreeToggle<cr>:wincmd p<cr>
-"/*******************************************vim-cpp-enhanced-highlight
+"/******************************************* vim-cpp-enhanced-highlight
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
@@ -215,5 +215,6 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 nmap <leader>ff :LeaderfFunction<cr>
-
+"/******************************************* tagbar
+nmap <F4> :TagbarToggle<cr>
 
