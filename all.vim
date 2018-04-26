@@ -177,7 +177,7 @@ endif
 "let g:indentLine_enabled = 1
 "/*******************************************NERDTree **********************/"
 "NERDTree
-let NERDTreeWinSize = 20
+let NERDTreeWinSize = 35 
 let NERDTreeWinPos = 'left'
 let NERDTreeDirArrowExpandable = '▸'
 let NERDTreeDirArrowCollapsible = '▾'
