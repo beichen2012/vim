@@ -37,6 +37,9 @@ if has("gui_running")
 else
     let g:isGUI = 0
 endif
+"// backspace键设置
+set nocompatible
+set backspace=indent,eol,start
 "//******搜索和匹配
 set hlsearch            "对被搜索的表达式高亮
 set incsearch           "在输入要搜索的文字时，实时匹配(逐字符高亮)
